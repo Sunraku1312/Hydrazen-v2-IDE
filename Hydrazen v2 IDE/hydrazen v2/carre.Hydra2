@@ -1,0 +1,14 @@
+LDI R0, 2        ; nombre à mettre au carré (modifiez ici)
+LDI R1, 0
+ADD R0, R15, R2
+
+LOOP:
+    ADD R2, R15, R3
+    BRZ END
+    ADD R1, R0, R1
+    ADI R2, -1
+    JMP LOOP
+
+END:
+    SEG R1
+    HLT

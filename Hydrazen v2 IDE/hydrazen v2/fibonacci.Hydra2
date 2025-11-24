@@ -1,0 +1,15 @@
+ldi r1,1
+ldi r2,0
+ldi r5,12
+main :
+add r1,r2,r2
+seg r2
+adi r5,255
+add r1,r2,r1
+seg r1
+adi r5,255
+sub r5,r0,r3
+brz end
+jmp main
+end :
+hlt
